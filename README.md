@@ -12,8 +12,8 @@ npm install react-router-dom
 crao -n app
 cd app
 npm start
-git config --global user.name "EyadManaa"
-git config --global user.email "ayad2552005@gmail.com"
+git config --global user.name "xxxx"
+git config --global user.email "xxxx@gmail.com"
 
 
 Screenshots of the UI:
