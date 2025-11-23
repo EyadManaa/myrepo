@@ -1,0 +1,90 @@
+/* Navbar.css */
+
+/* Use theme variable from index.css for the darkest navbar color */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--sage-primary-darkest); /* sage blue background */
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  color: #fff; /* white text color */
+  overflow: visible; /* allow logo to visually scale beyond navbar height */
+}
+
+.links {
+  display: flex;
+  gap: 2rem; /* space between links */
+}
+
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.navbar-logo {
+  height: 60px; /* layout height remains unchanged */
+  width: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 4px; /* subtle rounding */
+  transition: transform 180ms ease-in-out;
+  transform-origin: left center;
+  transform: scale(1.6); /* increased visual size */
+}
+
+.navbar-logo:hover {
+  transform: scale(1.75);
+}
+
+/* Responsive: reduce visual scale on small screens so logo doesn't overlap */
+@media (max-width: 768px) {
+  .navbar-logo {
+    transform: scale(1.15);
+  }
+  .navbar-logo:hover {
+    transform: scale(1.25);
+  }
+}
+
+.navbar-title {
+  color: #ffffff;
+  font-size: 1.12rem;
+  margin: 0;
+}
+
+.links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.links a:hover {
+  color: var(--sage-accent); /* sage accent color on hover */
+  transform: scale(1.1); /* slight zoom effect */
+}
+
+.navbar a {
+  color: #fff;
+}
+
+.navbar a.active, .navbar a:hover {
+  color: var(--sage-accent);
+}
+
+@media (max-width: 768px) {
+  .links {
+    gap: 1rem;
+  }
+  .links a {
+    font-size: 0.9rem;
+  }
+}

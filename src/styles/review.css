@@ -1,0 +1,177 @@
+/* Contact form box at the bottom of Review page */
+.review-contact-box {
+  margin: 3rem auto 0 auto;
+  max-width: 700px;
+  background: #f7fafc;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(30, 41, 59, 0.10);
+  padding: 2rem 2.2rem 1.5rem 2.2rem;
+}
+
+.review-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.review-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.review-contact-form label {
+  font-weight: 500;
+  font-size: 1.08rem;
+}
+
+.review-contact-form input,
+.review-contact-form textarea,
+.review-contact-form select {
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  font-size: 1.08rem;
+  background: #fff;
+  resize: vertical;
+}
+
+.review-contact-form select {
+  margin-top: 0.1rem;
+}
+
+.review-form-submit {
+  margin-top: 0.7rem;
+  padding: 0.7rem 1.5rem;
+  background: var(--sage-primary-darkest);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.review-form-submit:hover, .review-form-submit:focus {
+  background: var(--sage-primary-dark);
+}
+/* Center and enlarge heading and paragraph on Review page */
+.review h2 {
+  text-align: center;
+  font-size: 2.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.review p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2.2rem;
+}
+/* Review page service boxes */
+.review-services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.review-service-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--sage-surface);
+  border: 1px solid var(--sage-border);
+  color: var(--sage-text);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(30, 41, 59, 0.08);
+  padding: 1.2rem 2.5rem;
+  min-height: 80px;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.review-service-box:hover {
+  box-shadow: 0 6px 24px rgba(74, 118, 141, 0.13);
+  border-color: var(--sage-primary);
+}
+
+.review-service-box img {
+  width: 48px;
+  height: 48px;
+  margin-right: 2rem;
+  object-fit: contain;
+}
+
+/* Star rating styles for service boxes */
+.star-rating {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  margin-right: auto;
+  margin-top: 0.5rem;
+  gap: 0.2rem;
+}
+.right-stars {
+  margin-left: auto;   /* pushes stars to the far right */
+  display: flex;
+  gap: 0.2rem;
+}
+
+.star {
+  user-select: none;
+  transition: color 0.15s;
+}
+.star.checked {
+  color: #fbbf24;
+}
+
+@media (max-width: 600px) {
+  .review-service-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+  }
+  .review-service-box img {
+    margin: 0 0 0.5rem 0;
+  }
+}
+
+.service-title {
+  font-weight: 600;
+  font-size: 1.15em;
+  min-width: 220px;   /* controls alignment */
+  max-width: 220px;   /* keeps titles equal width */
+}
+
+.head-page{
+    margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+
+/* Make the image fill the entire left side */
+.review-service-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.review-service-box img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20%;         /* left side portion */
+  height: 100%;
+  object-fit: cover;  /* crop nicely */
+  border-radius: 14px 0 0 14px;
+}
+
+/* Push existing content to the right side */
+.review-service-box .service-title,
+.review-service-box .right-stars {
+  margin-left: 22%;   /* move text out of image area */
+  z-index: 2;
+  position: relative;
+}

@@ -1,0 +1,37 @@
+.site-footer {
+  background: var(--sage-primary-darkest);
+  color: #fff;
+  padding: 1rem 1.25rem;
+  margin-top: 100px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* stack email and copyright */
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.footer-email a {
+  color: var(--sage-accent);
+  text-decoration: none;
+}
+
+.footer-email a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}

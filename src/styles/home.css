@@ -1,0 +1,165 @@
+/* Services grid: 3 columns on desktop */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  margin-top: 2.5rem;
+}
+
+.booking-btn {
+  margin-top: auto;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+  transition: background 0.18s, transform 0.18s;
+}
+.booking-btn:hover, .booking-btn:focus {
+  background: #1d4ed8;
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Banner styles */
+
+/* Hero banner - full bleed */
+
+.home-banner {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+}
+
+.home-banner-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+
+
+.home-content {
+  padding: 1.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-content h2{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Feature grid: three centered cards */
+.feature-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: var(--sage-surface);
+  border: 1px solid var(--sage-border);
+  color: var(--sage-text);
+  border-radius: 14px;
+  padding: 1.1rem 1rem;
+  width: 280px; /* thinner cards */
+  min-height: 260px; /* reduced height */
+  box-shadow: 0 10px 26px rgba(18, 38, 63, 0.09);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms ease, filter 220ms ease;
+  will-change: transform;
+}
+
+.feature-card:hover {
+  box-shadow: 0 6px 24px rgba(74, 118, 141, 0.13);
+  border-color: var(--sage-primary);
+}
+
+.feature-card img {
+  height: 130px; /* reduced icon height to match shorter cards */
+  width: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1), filter 220ms ease;
+}
+
+.feature-card:hover,
+.feature-card:focus-within {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 22px 48px rgba(18, 38, 63, 0.14);
+  filter: saturate(1.03);
+}
+
+.feature-card:hover img,
+.feature-card:focus-within img {
+  transform: translateY(-6px) scale(1.06);
+}
+
+.feature-card:active {
+  transform: translateY(-4px) scale(1.01);
+}
+
+.feature-card h4 {
+  margin: 0;
+  font-size: 1.12rem;
+}
+
+.feature-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+@media (max-width: 700px) {
+  .feature-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    width: 92%;
+    min-height: auto;
+  }
+  .feature-card img {
+    height: 110px; /* responsive icon size */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-banner-img {
+    height: 220px;
+  }
+
+  .banner-content h1 { font-size: 2rem; }
+  .banner-content p { font-size: 1rem; }
+  .car-icon { height: 80px; margin-top: 1rem; }
+}

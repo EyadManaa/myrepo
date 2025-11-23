@@ -1,0 +1,96 @@
+/* Sage blue theme variables */
+:root {
+  --sage-bg: #e6f0ef;
+  --sage-surface: #f4f8f7;
+  --sage-primary: #4a768d;
+  --sage-primary-dark: #355c6c;
+  --sage-primary-darkest: #2c4a54;
+  --sage-accent: #7fa6b6;
+  --sage-text: #22343c;
+  --sage-link: #2563eb;
+  --sage-border: #b7c9d1;
+}
+
+body, .page {
+  background: var(--sage-bg) !important;
+  color: var(--sage-text);
+}
+
+/* Contact Info Styles */
+.contact-info {
+  margin: 2.5rem auto 0 auto;
+  max-width: 500px;
+  height: 260px;
+  background: var(--sage-surface) !important;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(74, 118, 141, 0.10);
+  padding: 2rem 2.2rem 1.5rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+  align-items: center;
+  color: var(--sage-text);
+}
+
+.contact-info .contact-icons {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.contact-info .contact-icon {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  transition: transform 0.15s;
+}
+.contact-info .contact-icon:hover {
+  transform: scale(1.12);
+}
+
+.contact-info .contact-label {
+    text-align: center;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.contact-info .contact-value {
+  font-size: 1.08rem;
+  color: var(--sage-link);
+  word-break: break-all;
+}
+
+.contact-info {
+  border: 1px solid var(--sage-border);
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  border: 1px solid var(--sage-border);
+  background: #fff;
+  color: var(--sage-text);
+}
+
+.contact-form-submit {
+  background: var(--sage-primary-darkest);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.contact-form-submit:hover, .contact-form-submit:focus {
+  background: var(--sage-primary-dark);
+}
+
+.contact-info .contact-icon svg {
+  stroke: var(--sage-primary);
+}
+.contact-info .contact-icon:hover svg {
+  stroke: var(--sage-accent);
+}
+
+
