@@ -1,4 +1,6 @@
 import React from 'react';
+// Debug log to verify App is loaded and rendering
+console.log('App module loaded');
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
@@ -9,6 +11,7 @@ import Contact from './pages/Contact';
 import Booking from './pages/Booking';
 
 function App() {
+	console.log('App render()');
 	return (
 		<Router>
 			<div className="app-root">
